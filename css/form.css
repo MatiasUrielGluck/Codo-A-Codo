@@ -1,0 +1,84 @@
+/* Para dispositivos grandes */
+.formulario-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.izq {
+    width: 50%;
+}
+
+.der {
+    width: 50%;
+}
+
+input {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: medium;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    color: #ffffff;
+}
+
+.container-inferior {
+    margin-top: 1rem;
+    display: flex;
+    justify-content:space-around;
+}
+
+.boton-container input {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background-color: #D4AF37;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0px;
+    transition: all 0.2s linear;
+}
+
+.boton-container input:hover {
+    box-shadow: 0 0 1rem 0.05rem #D4AF37;
+}
+
+@media only screen and (max-width: 1007px) {
+    /* Para dispositivos medianos y chicos */
+    .formulario-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    input {
+        display: inline-block;
+        width: 50%;
+        min-width: fit-content;
+    }
+
+    textarea {
+        display: inline-block;
+        width: 50%;
+        min-width: fit-content;
+    }
+
+    .container-inferior {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content:space-around;
+    }
+
+    iframe {
+        width:fit-content;
+    }
+}

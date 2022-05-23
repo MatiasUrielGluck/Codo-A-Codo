@@ -1,0 +1,89 @@
+/* Para dispositivos grandes */
+header {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(53, 52, 52);
+}
+
+.logo-container {
+    width: 50%;
+    margin-left: 1rem;
+}
+
+.logo-container p {
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    color: #D4AF37;
+    margin: 0.8rem;
+}
+
+header nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #D4AF37;
+    text-decoration: overline #d4af3700;
+    transition: all 0.15s linear;
+    font-family: 'Roboto', sans-serif;
+}
+
+header a:hover {
+    text-decoration: overline #D4AF37;
+}
+
+@media only screen and (max-width: 1007px) {
+    /* Para dispositivos medianos */
+
+    .header-container {
+        flex-flow: row wrap;
+        text-align: center;
+    }
+
+    .logo-container {
+        width: 100%;
+    }
+
+    header nav {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    /* Para dispositivos chicos */
+    header {
+        z-index: 3;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+    }
+
+    header nav {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 1rem;
+    }
+
+    header a {
+        padding: 1rem;
+    }
+}

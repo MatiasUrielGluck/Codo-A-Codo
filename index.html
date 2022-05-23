@@ -1,0 +1,93 @@
+<!-- Trabajo Práctico Obligatorio, Codo a Codo -->
+<!-- Comisión 22080 -->
+<!-- Matías Gluck, 43448348, matiasugluck@gmail.com -->
+<!-- Tema elegido: casa de venta de pianos -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/68ba57d17d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/slides.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Gluck Pianos</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+    <script src="./js/nav.js"></script>
+
+    <!-- Main -->
+    <main>
+        <section class="container">
+            <div>
+                <h1>Gluck Pianos</h1>
+                <p>
+                    Somos una empresa con más de 20 años en el mercado argentino 
+                    de pianos.
+                    La calidad de instrumentos, los servicios pre y post venta
+                    y las exposiciones anuales nos han dado un importante
+                    reconocimiento y prestigio a nivel nacional.
+                    En Gluck Pianos contamos con músicos profesionales que te orientarán en la 
+                    compra del piano que mejor se adapte a tus necesidades y gustos.
+                    Te invitamos a recorrer nuestra página web y a ponerte en contacto con nosotros
+                    haciendo click <a href="contacto.html">aquí</a>.
+                </p>
+            </div>
+            <div>
+                <img src="./imgs/foto-negocio.jpg" alt="">
+            </div>
+        </section>
+        
+        <!-- Slides Principal -->
+        <section class="slides-principal">
+            <div class="slide move-slide">
+                <img src="./imgs/pianos/piano1.png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="./imgs/pianos/piano2.png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="./imgs/pianos/piano3.png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="./imgs/pianos/piano4.png" alt="">
+            </div>
+
+            <!-- Botones adelante/atrás -->
+            <a class="flecha-izq" onclick="cambiarSlide(-1)"><i class="fa-solid fa-arrow-left fa-2xl"></i></a>
+            <a class="flecha-der" onclick="cambiarSlide(1)"><i class="fa-solid fa-arrow-right fa-2xl"></i></a>
+        
+            <!-- Puntos de navegación -->
+            <div class="puntos-container">
+                <div class="punto" onclick="mostrarSlide(0)"></div>
+                <div class="punto" onclick="mostrarSlide(1)"></div>
+                <div class="punto" onclick="mostrarSlide(2)"></div>
+                <div class="punto" onclick="mostrarSlide(3)"></div>
+            </div>
+        </section>
+
+        <!-- Slides Secundario -->
+        <section class="slides">
+            
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <script src="./js/footer.js"></script>
+
+    <script src="./js/slides.js"></script>
+</body>
+</html>
