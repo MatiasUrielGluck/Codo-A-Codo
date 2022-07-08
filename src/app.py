@@ -8,7 +8,8 @@ from werkzeug.utils import secure_filename
 app=Flask(__name__)
 CORS(app)
 # configuro la base de datos, con el nombre el usuario y la clave
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/tpofinal'
+#app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/tpofinal'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://zgrxjtdeknoxui:b943d9c6342a65250670c5cda79099f227aefffeea9778b9a6001268781a7cce@ec2-44-195-162-77.compute-1.amazonaws.com:5432/ddn7hcl9k464p6'
 #                                               user:clave@localhost/nombreBaseDatos
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db= SQLAlchemy(app)
