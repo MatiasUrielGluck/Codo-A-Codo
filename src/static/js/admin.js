@@ -7,7 +7,7 @@ if (document.getElementById("app")) {
             loading: true
         },
         created() {
-            var url = 'http://localhost:5000/pianos'
+            var url = 'https://gluck-pianos.herokuapp.com/pianos'
             this.fetchData(url)
         },
         methods: {
@@ -23,7 +23,7 @@ if (document.getElementById("app")) {
                     })
             },
             eliminar(piano) {
-                const url = 'http://localhost:5000/piano/' + piano;
+                const url = 'https://gluck-pianos.herokuapp.com/piano/' + piano;
                 var options = {
                     method: 'DELETE',
                 }

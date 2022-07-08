@@ -20,7 +20,7 @@ function modificar() {
         imagen: i,
         precio: p
     }
-    let url = "http://localhost:5000/pianos/"+id
+    let url = "https://gluck-pianos.herokuapp.com/pianos/"+id
     var options = {
         body: JSON.stringify(piano),
         method: 'PUT',

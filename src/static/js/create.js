@@ -19,7 +19,7 @@ async function guardar() {
 
     console.log(producto)
 
-    let url = "http://localhost:5000/pianos"
+    let url = "https://gluck-pianos.herokuapp.com/pianos"
     var options = {
         body: JSON.stringify(producto),
         method: 'POST',
@@ -43,7 +43,7 @@ async function guardar() {
     data.append('imagen', document.querySelector("#imagen").files[0])
     data.append('imagen', document.querySelector("#imagen").files[0].name)
 
-    fetch('http://localhost:5000/upload_image', { method:'POST', body: data} )
+    fetch('https://gluck-pianos.herokuapp.com/upload_image', { method:'POST', body: data} )
     .then(() => {
         console.log('Imagen guardada correctamente');
         alert('Imagen cargada correctamente');

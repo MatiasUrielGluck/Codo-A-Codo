@@ -2,7 +2,7 @@ let pianos = [];
 let loading = true;
 let errored = false;
 
-fetch("http://localhost:5000/pianos")
+fetch("https://gluck-pianos.herokuapp.com/pianos")
 .then(response => response.json())
 .then(data => {
     pianos = data;
@@ -13,7 +13,7 @@ fetch("http://localhost:5000/pianos")
     for (var piano of pianos) {
         cadenaHtml += `
         <div class="instrumento" id=${piano.id}>
-            <img src="./imgs/pianos/${piano.imagen}" alt="">
+            <img src="../static/imgs/pianos/${piano.imagen}" alt="">
             <div>
                 <h1>${piano.modelo}</h1>
                 <p>$${piano.precio}</p>

@@ -1,5 +1,5 @@
 import os
-from flask import Flask ,jsonify,request,redirect
+from flask import Flask ,jsonify,request,redirect,render_template
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -9,7 +9,7 @@ app=Flask(__name__)
 CORS(app)
 # configuro la base de datos, con el nombre el usuario y la clave
 #app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/tpofinal'
-app.config['SQLALCHEMY_DATABASE_URI']='postgres://zgrxjtdeknoxui:b943d9c6342a65250670c5cda79099f227aefffeea9778b9a6001268781a7cce@ec2-44-195-162-77.compute-1.amazonaws.com:5432/ddn7hcl9k464p6'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://zgrxjtdeknoxui:b943d9c6342a65250670c5cda79099f227aefffeea9778b9a6001268781a7cce@ec2-44-195-162-77.compute-1.amazonaws.com:5432/ddn7hcl9k464p6'
 #                                               user:clave@localhost/nombreBaseDatos
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db= SQLAlchemy(app)
@@ -38,6 +38,36 @@ class PianoSchema(ma.Schema):
 piano_schema=PianoSchema()            # para crear un producto
 pianos_schema=PianoSchema(many=True)  # multiples registros
  
+# Rutas visibles
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/nuestros_pianos')
+def nuestros_pianos():
+    return render_template('pianos.html')
+
+@app.route('/servicios')
+def servicios():
+    return render_template('servicios.html')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
+@app.route('/create')
+def create():
+    return render_template('create.html')
+
+@app.route('/update')
+def update():
+    return render_template('update.html')
+
+# Rutas REST API
 @app.route('/pianos',methods=['GET'])
 def get_pianos():
     all_pianos=Piano.query.all()     # query.all() lo hereda de db.Model
@@ -89,4 +119,4 @@ def upload_piano_image():
 
 # programa principal *******************************
 if __name__=='__main__':  
-    app.run(debug=True, port=5000)  
+    app.run(debug=True)  
