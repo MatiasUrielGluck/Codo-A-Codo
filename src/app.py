@@ -16,7 +16,7 @@ db= SQLAlchemy(app)
 ma=Marshmallow(app)
 
 # defino las constantes para subir las fotos de los pianos
-RUTA_CARGA_IMAGEN = os.path.join(os.pardir, 'web', 'imgs', 'pianos')
+RUTA_CARGA_IMAGEN = os.path.join('web', 'imgs', 'pianos')
 
 # defino la tabla
 class Piano(db.Model):   # la clase Producto hereda de db.Model     
