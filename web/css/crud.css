@@ -1,0 +1,9 @@
+.container {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.btn-success {
+    background: #D4AF37;
+    border: 1px solid #D4AF37;
+}

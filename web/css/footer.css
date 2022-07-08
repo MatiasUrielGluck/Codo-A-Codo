@@ -1,0 +1,34 @@
+/* Para dispositivos grandes */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(53, 52, 52);
+    color: white;
+}
+
+footer p, footer div {
+    padding: 1%;
+}
+
+footer div i {
+    text-decoration: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1007px) {
+    /* Para dispositivos medianos */
+    footer {
+        flex-flow: column wrap;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    /* Para dispositivos chicos */
+    
+}
